@@ -63,13 +63,8 @@ const myStyleObject ={
 
 let data = [{
     name: 'Parent',
-    depth: 0,
 	children: [{
-        name: 'Child One',
-        depth: 1,
-	}, {
-        name: 'Child Two',
-        depth: 1,
+        name: 'Child One'
 	}]
 }];
 export default class TreeGraph extends Component {
