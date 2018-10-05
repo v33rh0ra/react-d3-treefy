@@ -2,7 +2,8 @@
 import React, { Component } from 'react'
 
 import ReactDOM from 'react-dom';
-var d3 = require('d3');
+import ReactFauxDOM from 'react-faux-dom';
+import d3 from 'd3';
 
 export default class MyD3Tree extends Component {
   constructor(props){
@@ -48,6 +49,7 @@ export default class MyD3Tree extends Component {
 //   }
   handleClick = (d)=>{
         console.log('node clicked')
+        console.log(d);
         if (d.children){
             d._children = d.children;
             d.children = null;
@@ -55,7 +57,6 @@ export default class MyD3Tree extends Component {
             d.children = d._children;
             d._children = null;
         }
-        return d;
   };
 
     handleCollapse=(d)=>{
@@ -206,7 +207,9 @@ export default class MyD3Tree extends Component {
 }
   render() {
     return (
-      <svg></svg>
+      <svg>
+          
+      </svg>
     )
   }
 
